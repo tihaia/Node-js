@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  form(method="POST" action="/new")
+    input(type="text" name="title" placeholder="Введите задачу" required)
+    button(type="submit") Добавить
+  a(href="/") ← Назад

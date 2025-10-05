@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  ul
+    each task in tasks
+      li
+        if task.done
+          s #{task.title}
+        else
+          | #{task.title}
+        form(action=`/${task.id}/toggle` method="POST")
+          button(type="submit") Переключить
+        form(action=`/${task.id}/delete` method="POST")
+          button(type="submit") Удалить
+  a(href="/new") Добавить новую задачу
