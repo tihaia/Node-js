@@ -151,7 +151,7 @@ WebHooks были встроены в контроллер задач (todoContr
 ```js
     POST /api/auth/login
 ```
-![alt text](images/image.png)
+![alt text](images/2.jpg)
 
 Пример успешного ответа:
 
@@ -167,32 +167,36 @@ WebHooks были встроены в контроллер задач (todoContr
 ```js
     Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
-![alt text](images/image.png)
+![alt text](images/6.jpg)
 
 (токен подставляется тот, который я получила после логина)
 
 5.7. Тестирование WebHooks
 
 WebHooks были протестированы с помощью сервиса https://webhook.site/ где я получила свой уникальный ID
-![alt text](images/image.png)
-![alt text](images/image.png)
+![alt text](images/13.jpg)
 
 * при создании задачи приходит событие todo_created
-![alt text](images/image.png)
-![alt text](images/image.png)
+![alt text](images/4.jpg)
+![alt text](images/3.jpg)
 
 * при обновлении — todo_updated
-![alt text](images/image.png)
-![alt text](images/image.png)
+![alt text](images/8.jpg)
+![alt text](images/9.jpg)
 
 * при переключении — todo_toggled
-![alt text](images/image.png)
-![alt text](images/image.png)
+![alt text](images/10.jpg)
+![alt text](images/11.jpg)
 
 * при удалении — todo_deleted
-![alt text](images/image.png)
-![alt text](images/image.png)
+![alt text](images/12.png)
+![alt text](images/14.jpg)
 
+* как действия отображаются в консоли:
+![alt text](images/15.jpg)
+
+* пример уведомления:
+![alt text](images/13.jpg)
 ## Контрольные вопросы
 
 1. В чём основные отличия REST от WebHooks?
@@ -220,3 +224,4 @@ WebHooks - это «сервер сам отправляет данные кли
 * Реализован сервис отправки WebHook-уведомлений при событиях CRUD над задачами.
 * WebHooks работают поверх существующей архитектуры: REST-контроллеры вызывают отправку после изменения данных.
 * JWT-аутентификация осталась прежней - доступ к ресурсам проверяется до вызова WebHook-логики.
+
